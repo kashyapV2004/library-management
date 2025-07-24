@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashyap Library Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background"></div>
+    
+    <header class="glass-card">
+        <h1>Kashyap Library</h1>
+        <p>Manage your book collection with ease</p>
+    </header>
+
+    <main>
+        <section class="add-book glass-card">
+            <h2>Add New Book</h2>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" required>
+                </div>
+                <div class="form-group">
+                    <label for="status">Status</label>
+                    <select id="status">
+                        <option value="Available">Available</option>
+                        <option value="Checked Out">Checked Out</option>
+                        <option value="Lost">Lost</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Add Book</button>
+            </form>
+        </section>
+
+        <section class="book-list glass-card">
+            <h2>Book Collection</h2>
+            <div class="search-filter">
+                <input type="text" id="search" placeholder="Search books...">
+                <select id="filter">
+                    <option value="all">All Books</option>
+                    <option value="Available">Available</option>
+                    <option value="Checked Out">Checked Out</option>
+                    <option value="Lost">Lost</option>
+                </select>
+            </div>
+            <table id="book-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="book-list">
+                    <!-- Books will be added here dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="glass-card">
+        <div class="footer-content">
+            <div class="developer-info">
+                <h3>Developer Information</h3>
+                <p><strong>Name:</strong> Vinit Kumar</p>
+                <p><strong>Email:</strong> vinitkumar10062004@gmail.com</p>
+                <p><strong>Company:</strong> Kashyap Group</p>
+                <p><strong>Phone:</strong> 873807XXXX</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Kashyap Library Management System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
